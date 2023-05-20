@@ -45,10 +45,4 @@ CREATE INDEX
 
 --
 
-INSERT INTO category(id,name) VALUES(1,'Food');
-
-INSERT INTO category(id,name) VALUES(2,'Travel');
-
-INSERT INTO category(id,name) VALUES(3,'Other');
-
 COMMIT;

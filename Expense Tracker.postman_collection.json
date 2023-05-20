@@ -1,0 +1,226 @@
+{
+  "info": {
+    "_postman_id": "23ed67c4-1503-4860-bdf8-7389bd8a62a1",
+    "name": "Expense Tracker",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25791590"
+  },
+  "item": [
+    {
+      "name": "Category",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/category/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Something\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/category/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get One",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/category/1/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", "1", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update One",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"Food\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/category/1/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", "1", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete One",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"timestamp\": \"2023-01-01 12:12:00\",\r\n    \"amount\": 123,\r\n    \"description\": \"something\",\r\n    \"category_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/category/1/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", "1", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Expense",
+      "item": [
+        {
+          "name": "List",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/expense/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "expense", ""],
+              "query": [
+                {
+                  "key": "start_date",
+                  "value": "2023-05-02",
+                  "disabled": true
+                },
+                {
+                  "key": "end_date",
+                  "value": "2023-05-18",
+                  "disabled": true
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Create",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"timestamp\": \"2023-01-01 12:12:00\",\r\n    \"amount\": 123,\r\n    \"description\": \"\",\r\n    \"category_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/expense/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "expense", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get One",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/api/expense/2/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "expense", "2", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update One",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"amount\": 123456,\r\n    \"description\": \"some other description\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/expense/1/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "expense", "1", ""]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete One",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"timestamp\": \"2023-01-01 12:12:00\",\r\n    \"amount\": 123,\r\n    \"description\": \"something\",\r\n    \"category_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/api/expense/2/",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "expense", "2", ""]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
