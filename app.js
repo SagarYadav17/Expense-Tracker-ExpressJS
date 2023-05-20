@@ -35,6 +35,21 @@ function isValidDateTimeString(datetimeString) {
   return regex.test(datetimeString);
 }
 
+server.get("/category/", async (req, res) => {
+  let query = `
+    SELECT *
+    FROM category
+    ORDER BY name DESC
+  `;
+
+  try {
+    const data = await run_query(query);
+    res.status(200).json(data.rows);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
 server.get("/expense/", async (req, res) => {
   const { start_date, end_date } = req.query;
 
@@ -122,7 +137,7 @@ server.patch("/expense/:id/", async (req, res) => {
     return res.status(400).json({ error: "Invalid request body format." });
   }
 
-  let query = "UPDATE expense SET";
+  let query = "UPDATE expense SET ";
   const updateFields = [];
 
   if (amount !== undefined) {
